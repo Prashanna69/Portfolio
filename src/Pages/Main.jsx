@@ -1,20 +1,23 @@
-import { Box, Button, Flex,HStack,Text,Progress } from "@chakra-ui/react";
+import { EditIcon, PhoneIcon, AtSignIcon } from "@chakra-ui/icons";
+import { Box, Button, Flex,HStack,Text,Progress, Spacer, SimpleGrid } from "@chakra-ui/react";
 
 export default function Main ()
 {
     return (
         <>
-        <Flex w='100%' bg='#2c1b1b' color='white' p='20px' flexDir='column'>
-                <Text color='whiteAlpha.500' fontSize='4rem' mt='7rem' ml='7rem' mb={ 0 } fontWeight={ 700 }>
+            <Box id="HomePage" minH={400} bg='#2c1b1b' color='white' p='20px' boxShadow='2px 2px 10px black'>
+            <Flex  flexDir='column'>
+                <Text color='whiteAlpha.500' fontSize='4rem' mt='7rem' ml='7rem' fontWeight={ 700 }>
                 I'm a
             </Text>
             <Text fontSize='5rem' ml='7rem' mt={ 0 } fontWeight={ 700 }>Front-End Developer.</Text>
-            <Button ml='7rem' colorScheme='orange' mb='6rem' maxW='10rem'>Contact me</Button>
             </Flex>
+            <Button ml='7rem' colorScheme='orange' mb='6rem' maxW='10rem' position='none'>Contact me</Button>
+            </Box>
 
             {/*  */ }
 
-            <Box as="div" bg='#1f1f1f' minH={850} p={10} boxShadow='2px 2px 10px black'>
+            <Box id="AboutmePage" as="div" bg='#1f1f1f' minH={850} p={10} boxShadow='2px 2px 10px black'>
                 <Flex justifyContent='center'>
                     <Text color='#dd6b20' mt='2rem' fontWeight={700} fontSize='4rem'> About me</Text>
                 </Flex>
@@ -58,34 +61,106 @@ export default function Main ()
 
             {/*  */ }
 
-            <Box as="div" bg='#3d1919' minH={850} p={10} boxShadow='2px 2px 10px black'>
+            <Box id="skillPage" as="div" bg='#3d1919' minH={800} p={10} boxShadow='2px 2px 10px black' >
                 <Flex justifyContent='center'>
                     <Text color='#dd6b20' mt='2rem' fontWeight={700} fontSize='4rem'>Skills</Text>
                 </Flex>
-                <Flex>
-                    <Flex flexDir='column'>
-                        <Text color="white" fontWeight={ 500 } fontSize='20px'>
-                            <li >HTML</li>
-                            <Progress colorScheme='orange' value={90} />
+                <Flex justifyContent='space-around' style={{listStyle:'none'}} mt={40}  >
+                    <Flex flexDir='column' wrap='wrap'>
+                        <Text color="white" fontWeight={ 500 } fontSize='20px' minW={400}>
+                            <Flex>
+                                <Text>HTML</Text>
+                                <Spacer/>
+                               <Text>90%</Text>
+                            </Flex>
+                            <Progress colorScheme='orange' value={90} position='none' />
                         </Text>
-                        <Text color="white" fontWeight={ 500 } fontSize='20px'>
-                            <li>CSS</li>
-                            <Progress colorScheme='orange' value={20} />
+                        <Text color="white" fontWeight={ 500 } fontSize='20px' mt={10}>
+                            <Flex>
+                                <Text>CSS</Text>
+                                <Spacer/>
+                               <Text>60%</Text>
+                            </Flex>
+                            <Progress colorScheme='orange' value={60} position='none' />
                         </Text>
                     </Flex>
-                    <HStack spacing='10rem'>
-                        <Flex flexDir='column'>
-                            <Text color="white" fontWeight={ 500 } fontSize='20px'>
-                                <li >JavaScript</li>
-                                <Progress colorScheme='orange' value={90} />
+
+                        <Flex flexDir='column' wrap='wrap'>
+                            <Text color="white" fontWeight={ 500 } fontSize='20px' minW={400}>
+                            <Flex>
+                                <Text>JavaScript</Text>
+                                <Spacer/>
+                               <Text>80%</Text>
+                            </Flex>
+                                <Progress colorScheme='orange' value={80}  position='none'/>
                             </Text>
-                            <Text color="white" fontWeight={ 500 } fontSize='20px'>
-                                <li>React</li>
-                                <Progress colorScheme='orange' value={20} />
+                            <Text color="white" fontWeight={ 500 } fontSize='20px' mt={10} >
+                            <Flex>
+                                <Text>React</Text>
+                                <Spacer/>
+                               <Text>51%</Text>
+                            </Flex>
+                                <Progress colorScheme='orange' value={51} position='none' />
                             </Text>
                         </Flex>
-                    </HStack>
                 </Flex>
+                <Flex justifyContent='center' mt='10rem'>
+                    <Text color='white' fontWeight={800} fontSize='3rem'>I am Availabe for Freelancer !</Text>
+                </Flex>
+            </Box>
+
+            {/*  */ }
+
+            <Box id="servicePage" as="div" bg='#1f1f1f' minH={800} p={10} boxShadow='2px 2px 10px black'>
+                <Flex justifyContent='center'>
+                    <Text color='#dd6b20' mt='2rem' fontWeight={700} fontSize='4rem'>Services</Text>
+                </Flex>
+                <SimpleGrid>
+
+                </SimpleGrid>
+            </Box>
+
+            {/*  */ }
+            <Box id="contactMePage" as="div" bg='#dd5b20' minH={350} p={4} boxShadow='2px 2px 10px black'>
+                <Flex justifyContent='center'>
+                    <Text color='white' mt='1rem' fontWeight={700} fontSize='4rem'>Contact me</Text>
+                </Flex>
+                <HStack spacing='10rem' mt='2rem' ml={40}>
+                    <Flex flexDir='column' justifyContent='center' alignItems='center'>
+                        <Flex alignItems='center' ml={2}>
+                            <HStack spacing={2}>
+                            <PhoneIcon color='white'/>
+                            <Text color='white' fontWeight={ 500 } fontSize='1.5rem' >
+                                Call me on
+                            </Text>
+                            </HStack>
+                        </Flex>
+                            <Text color='white' fontWeight={ 500 } fontSize='1.2rem'>9842381781</Text>
+                    </Flex>
+                    <Flex flexDir='column' justifyContent='center' ml={10}>
+                        <Flex alignItems='center' ml={2}>
+                            <HStack spacing={2}>
+                            <EditIcon color='white'/>
+                            <Text color='white' fontWeight={ 500 } fontSize='1.5rem' >
+                                Email
+                            </Text>
+                            </HStack>
+                        </Flex>
+                            <Text color='white' fontWeight={ 500 } fontSize='1.2rem'>plohani2003@gmail.com</Text>
+                    </Flex>
+                    <Flex flexDir='column' justifyContent='center' ml={10}>
+                        <Flex alignItems='center' ml={2}>
+                            <HStack spacing={2}>
+                            <AtSignIcon color='white'/>
+                            <Text color='white' fontWeight={ 500 } fontSize='1.5rem' >
+                                Address
+                            </Text>
+                            </HStack>
+                        </Flex>
+                            <Text color='white' fontWeight={ 500 } fontSize='1.2rem'>Gongabu,Kathmandu</Text>
+                    </Flex>
+                </HStack>
+
             </Box>
         </>
     )
