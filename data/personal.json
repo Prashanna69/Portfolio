@@ -1,0 +1,40 @@
+{
+    "Personal":[
+        {
+            "id" : 1,
+            "Name" : "Prashanna Lohani",
+            "Country":"Nepal",
+            "Number" : "9842381781",
+            "Email" : "plohani2003@gmail.com",
+            "image" :"",
+            "Education":"Bsc.(Hons) Computer Science University of Wolverhampton",
+            "Address":"Gongabu"
+        }
+    ],
+
+    "Skills":[
+        {
+            "Title": "HTML",
+            "Percent":"90"
+        },
+        {
+            "Title": "CSS",
+            "Percent":"70"
+        },
+        {
+            "Title": "JavaScript",
+            "Percent":"80"
+        },
+        {
+            "Title": "React",
+            "Percent":"51"
+        }
+    ],
+    "Services":[
+        {
+            "id" : 11,
+            "Topic":"Web-Development",
+            "Description":"loerm"
+        }
+    ]
+}

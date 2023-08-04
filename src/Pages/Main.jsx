@@ -1,6 +1,8 @@
 import { EditIcon, PhoneIcon, AtSignIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex,HStack,Text,Progress, Spacer, SimpleGrid } from "@chakra-ui/react";
 
+const date = new Date();
+
 export default function Main ()
 {
     return (
@@ -32,7 +34,7 @@ export default function Main ()
                     <HStack spacing='10rem'>
                         <Flex flexDir='column' alignItems='center'wrap='wrap'>
                             <Text color='#dd6b20' fontWeight={ 500 } fontSize='20px'>Name</Text>
-                            <Text color='white' fontWeight={500} fontSize='20px'>Prashanna Lohani</Text>
+                            <Text color='white' fontWeight={ 500 } fontSize='20px'>Prashanna Lohani</Text>
                         </Flex>
                         <Flex flexDir='column' alignItems='center' wrap='wrap'>
                             <Text color='#dd6b20' fontWeight={ 500 } fontSize='20px'>Country</Text>
@@ -58,6 +60,7 @@ export default function Main ()
                     </Flex>
 
             </Box>
+
 
             {/*  */ }
 
@@ -160,8 +163,13 @@ export default function Main ()
                             <Text color='white' fontWeight={ 500 } fontSize='1.2rem'>Gongabu,Kathmandu</Text>
                     </Flex>
                 </HStack>
-
+                <footer>
+                    <Flex justifyContent='center' mt={14}>
+                        <Text color='white' fontWeight={ 500 } fontSize='1rem'>© {date.getFullYear()}  PRASHANNA LOHANI. All rights reserved.</Text>
+                    </Flex>
+                </footer>
             </Box>
         </>
     )
 }
+
