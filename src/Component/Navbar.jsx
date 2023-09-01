@@ -1,13 +1,4 @@
-import {
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Tab,
-  TabList,
-  Tabs,
-  Container,
-} from "@chakra-ui/react";
+import { Flex, HStack, Tab, TabList, Tabs, Container } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
@@ -15,6 +6,7 @@ export default function Navbar() {
     <>
       <Container
         bg="#1f1f1f"
+        position="absolute"
         color="white"
         p="10px"
         w="100%"

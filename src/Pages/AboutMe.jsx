@@ -1,6 +1,9 @@
-import { Box, Flex, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import { useLoaderData } from "react-router-dom";
 
 export default function AboutMe() {
+  const about = useLoaderData();
+  console.log(about);
   return (
     <Box
       id="AboutmePage"
@@ -29,7 +32,7 @@ export default function AboutMe() {
         <Text color="white" mt="5rem" ml="3rem" fontWeight={500} w="28rem">
           My name is{" "}
           <Text as="span" color="#dd6b20" fontSize="1.5rem">
-            Prashanna Lohani.
+            {about.Name}
           </Text>
           <br />I am a passionate individual with a keen interest in frontend
           development. With a strong foundation in web technologies and a
@@ -37,7 +40,7 @@ export default function AboutMe() {
           enthusiastic about crafting visually appealing and user-friendly
           interfaces. As a dedicated learner and aspiring frontend developer, I
           am actively seeking opportunities to contribute to innovative projects
-          that challenge and expand my skill set.{" "}
+          that challenge and expand my skill set.
         </Text>
       </Flex>
       <Flex
@@ -93,3 +96,7 @@ export default function AboutMe() {
     </Box>
   );
 }
+export const personalInfoLoader = async () => {
+  const res = await fetch("http://localhost:3000/Personal");
+  return res.json();
+};
