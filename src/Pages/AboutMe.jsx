@@ -1,9 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { useLoaderData } from "react-router-dom";
 
 export default function AboutMe() {
-  const about = useLoaderData();
-  console.log(about);
   return (
     <Box
       id="AboutmePage"
@@ -15,7 +12,6 @@ export default function AboutMe() {
     >
       <Flex justifyContent="center">
         <Text color="#dd6b20" mt="2rem" fontWeight={700} fontSize="4rem">
-          {" "}
           About me
         </Text>
       </Flex>
@@ -23,16 +19,17 @@ export default function AboutMe() {
       <Flex wrap="wrap" justify="center">
         <Box
           as="div"
-          bg="#dd6b20"
+          bgImage="url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60')"
+          bgPos="center"
+          bgSize="cover"
           minH={400}
           minW={300}
-          ml="15rem"
           mt="5rem"
         ></Box>
         <Text color="white" mt="5rem" ml="3rem" fontWeight={500} w="28rem">
           My name is{" "}
           <Text as="span" color="#dd6b20" fontSize="1.5rem">
-            {about.Name}
+            Prashanna Lohani.
           </Text>
           <br />I am a passionate individual with a keen interest in frontend
           development. With a strong foundation in web technologies and a
@@ -49,6 +46,7 @@ export default function AboutMe() {
         ml="2rem"
         wrap="wrap"
         justifyContent="space-around"
+        gap="2rem"
       >
         <Flex flexDir="column" alignItems="center" wrap="wrap">
           <Text color="#dd6b20" fontWeight={500} fontSize="20px">
@@ -96,7 +94,3 @@ export default function AboutMe() {
     </Box>
   );
 }
-export const personalInfoLoader = async () => {
-  const res = await fetch("http://localhost:3000/Personal");
-  return res.json();
-};

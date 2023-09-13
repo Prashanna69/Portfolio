@@ -24,10 +24,16 @@ export default function Skills() {
           Skills
         </Text>
       </Flex>
-      <Flex justifyContent="space-around" style={{ listStyle: "none" }} mt={40}>
+      <Flex
+        justifyContent="space-around"
+        style={{ listStyle: "none" }}
+        mt={40}
+        flexWrap="wrap"
+        gap="2rem"
+      >
         <Flex flexDir="column" wrap="wrap">
-          <Text fontWeight={500} minW={400}>
-            <Flex align="center" gap="2px">
+          <Text fontWeight={500} minW={{ base: "18rem", lg: "30rem" }}>
+            <Flex align="center">
               <IoLogoHtml5 />
               <Text>HTML</Text>
               <Spacer />
@@ -47,7 +53,7 @@ export default function Skills() {
         </Flex>
 
         <Flex flexDir="column" wrap="wrap">
-          <Text fontWeight={500} minW={400}>
+          <Text fontWeight={500} minW={{ base: "18rem", lg: "30rem" }}>
             <Flex align="center" gap="2px">
               <IoLogoJavascript />
               <Text>JavaScript</Text>
@@ -67,8 +73,8 @@ export default function Skills() {
           </Text>
         </Flex>
       </Flex>
-      <Flex justifyContent="center" mt="10rem">
-        <Text fontWeight={800} fontSize="3rem">
+      <Flex justifyContent="center" mt="10rem" flexShrink="inherit">
+        <Text fontWeight={800} fontSize={{ base: "2rem", lg: "3rem" }}>
           I am Availabe for Freelancer !
         </Text>
       </Flex>
