@@ -5,6 +5,7 @@ import {
   IoLogoCss3,
   IoLogoJavascript,
   IoLogoReact,
+  IoLogoPython,
 } from "react-icons/io5";
 
 export default function Skills() {
@@ -12,7 +13,7 @@ export default function Skills() {
     <Box
       id="skillPage"
       as="div"
-      bg="#3d1919"
+      bg="#111"
       minH={800}
       p={10}
       boxShadow="2px 2px 10px black"
@@ -33,43 +34,52 @@ export default function Skills() {
       >
         <Flex flexDir="column" wrap="wrap">
           <Text fontWeight={500} minW={{ base: "18rem", lg: "30rem" }}>
-            <Flex align="center">
-              <IoLogoHtml5 />
+            <Flex align="center" gap="4px">
+              <IoLogoHtml5 style={{ height: "2rem", width: "2rem" }} />
               <Text>HTML</Text>
               <Spacer />
               <Text>90%</Text>
             </Flex>
-            <Progress colorScheme="orange" value={90} />
+            <Progress colorScheme="orange" value={90} mt="1rem" />
           </Text>
           <Text fontWeight={500} mt={10}>
-            <Flex align="center" gap="2px">
-              <IoLogoCss3 />
+            <Flex align="center" gap="4px">
+              <IoLogoCss3 style={{ height: "2rem", width: "2rem" }} />
               <Text>CSS</Text>
               <Spacer />
               <Text>60%</Text>
             </Flex>
-            <Progress colorScheme="orange" value={60} />
+            <Progress colorScheme="orange" value={60} mt="1rem" />
+          </Text>
+          <Text fontWeight={500} mt={10}>
+            <Flex align="center" gap="4px">
+              <IoLogoPython style={{ height: "2rem", width: "2rem" }} />
+              <Text>Python</Text>
+              <Spacer />
+              <Text>40%</Text>
+            </Flex>
+            <Progress colorScheme="orange" value={40} mt="1rem" />
           </Text>
         </Flex>
 
         <Flex flexDir="column" wrap="wrap">
           <Text fontWeight={500} minW={{ base: "18rem", lg: "30rem" }}>
-            <Flex align="center" gap="2px">
-              <IoLogoJavascript />
+            <Flex align="center" gap="4px">
+              <IoLogoJavascript style={{ height: "2rem", width: "2rem" }} />
               <Text>JavaScript</Text>
               <Spacer />
               <Text>80%</Text>
             </Flex>
-            <Progress colorScheme="orange" value={80} />
+            <Progress colorScheme="orange" value={80} mt="1rem" />
           </Text>
           <Text fontWeight={500} mt={10}>
-            <Flex align="center" gap="2px">
-              <IoLogoReact />
+            <Flex align="center" gap="4px">
+              <IoLogoReact style={{ height: "2rem", width: "2rem" }} />
               <Text>React</Text>
               <Spacer />
               <Text>51%</Text>
             </Flex>
-            <Progress colorScheme="orange" value={51} />
+            <Progress colorScheme="orange" value={51} mt="1rem" />
           </Text>
         </Flex>
       </Flex>

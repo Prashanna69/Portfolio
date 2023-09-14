@@ -1,19 +1,11 @@
-import {
-  Flex,
-  HStack,
-  Tab,
-  TabList,
-  Tabs,
-  Container,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Tab, TabList, Tabs, Container, Box } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
   return (
     <>
       <Box
-        bg="#1f1f1f"
+        bg="#111"
         color="white"
         p="2rem 0rem"
         minW="100%"
@@ -27,7 +19,7 @@ export default function Navbar() {
       >
         <Tabs isLazy mt="10px" colorScheme="orange">
           <TabList>
-            <HStack spacing="50px" maxW="100vw">
+            <Flex gap="2rem" flexWrap="wrap">
               <Tab fontWeight={700}>
                 <Link
                   activeClass="active"
@@ -88,7 +80,7 @@ export default function Navbar() {
                   Contact
                 </Link>
               </Tab>
-            </HStack>
+            </Flex>
           </TabList>
         </Tabs>
       </Box>

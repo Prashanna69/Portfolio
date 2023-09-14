@@ -5,7 +5,7 @@ export default function Service() {
     <Box
       id="servicePage"
       as="div"
-      bg="#1f1f1f"
+      bg="#111"
       minH={800}
       p={10}
       boxShadow="2px 2px 10px black"

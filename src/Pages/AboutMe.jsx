@@ -5,7 +5,7 @@ export default function AboutMe() {
     <Box
       id="AboutmePage"
       as="div"
-      bg="#1f1f1f"
+      bg="#111"
       minH={850}
       p={10}
       boxShadow="2px 2px 10px black"

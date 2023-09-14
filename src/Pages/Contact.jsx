@@ -7,7 +7,7 @@ export default function Contact() {
     <Box
       id="contactMePage"
       as="div"
-      bg="#dd3b20"
+      bg="#4b4b4b"
       minH="200"
       p={4}
       boxShadow="2px 2px 10px black"
