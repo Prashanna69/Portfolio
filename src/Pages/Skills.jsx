@@ -47,9 +47,9 @@ export default function Skills() {
               <IoLogoCss3 style={{ height: "2rem", width: "2rem" }} />
               <Text>CSS</Text>
               <Spacer />
-              <Text>60%</Text>
+              <Text>80%</Text>
             </Flex>
-            <Progress colorScheme="orange" value={60} mt="1rem" />
+            <Progress colorScheme="orange" value={80} mt="1rem" />
           </Text>
           <Text fontWeight={500} mt={10}>
             <Flex align="center" gap="4px">
@@ -77,9 +77,9 @@ export default function Skills() {
               <IoLogoReact style={{ height: "2rem", width: "2rem" }} />
               <Text>React</Text>
               <Spacer />
-              <Text>51%</Text>
+              <Text>61%</Text>
             </Flex>
-            <Progress colorScheme="orange" value={51} mt="1rem" />
+            <Progress colorScheme="orange" value={61} mt="1rem" />
           </Text>
         </Flex>
       </Flex>
