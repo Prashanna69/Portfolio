@@ -5,6 +5,7 @@ import {
   IoPhonePortraitOutline,
   IoConstructOutline,
   IoTabletLandscapeOutline,
+  IoBrushOutline,
 } from "react-icons/io5";
 export default function Service() {
   return (
@@ -124,7 +125,7 @@ export default function Service() {
             flexDir="column"
             color="white"
           >
-            <IoDesktopSharp
+            <IoBrushOutline
               style={{ height: "3rem", width: "3rem", color: "white" }}
             />
             <Text fontSize="xl" mt="1rem" textAlign="center">
