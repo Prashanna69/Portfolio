@@ -1,6 +1,8 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function AboutMe() {
+  const [download, setDownload] = useState();
   return (
     <Box
       id="AboutmePage"
@@ -11,7 +13,12 @@ export default function AboutMe() {
       boxShadow="2px 2px 10px black"
     >
       <Flex justifyContent="center">
-        <Text color="#dd6b20" mt="2rem" fontWeight={700} fontSize="4rem">
+        <Text
+          color="#dd6b20"
+          mt="2rem"
+          fontWeight={700}
+          fontSize={{ base: "3rem", lg: "4rem" }}
+        >
           About me
         </Text>
       </Flex>
@@ -26,19 +33,24 @@ export default function AboutMe() {
           minW={300}
           mt="5rem"
         ></Box>
-        <Text color="white" mt="5rem" ml="3rem" fontWeight={500} w="28rem">
-          My name is{" "}
-          <Text as="span" color="#dd6b20" fontSize="1.5rem">
-            Prashanna Lohani.
+        <Flex flexDir="column">
+          <Text color="white" mt="5rem" ml="3rem" fontWeight={500} w="28rem">
+            My name is{" "}
+            <Text as="span" color="#dd6b20" fontSize="1.5rem">
+              Prashanna Lohani.
+            </Text>
+            <br />I am a passionate individual with a keen interest in frontend
+            development. With a strong foundation in web technologies and a
+            natural curiosity for the ever-evolving world of coding, I am
+            enthusiastic about crafting visually appealing and user-friendly
+            interfaces. As a dedicated learner and aspiring frontend developer,
+            I am actively seeking opportunities to contribute to innovative
+            projects that challenge and expand my skill set.
           </Text>
-          <br />I am a passionate individual with a keen interest in frontend
-          development. With a strong foundation in web technologies and a
-          natural curiosity for the ever-evolving world of coding, I am
-          enthusiastic about crafting visually appealing and user-friendly
-          interfaces. As a dedicated learner and aspiring frontend developer, I
-          am actively seeking opportunities to contribute to innovative projects
-          that challenge and expand my skill set.
-        </Text>
+          <Button maxW="10rem" ml="3rem" mt="2rem" colorScheme="orange">
+            Download CV
+          </Button>
+        </Flex>
       </Flex>
       <Flex
         padding="2rem"
